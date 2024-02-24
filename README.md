@@ -21,4 +21,3 @@ build.cmd
 ```
 
 Once it's done, you can see your folder `.bin`. You can then paste it into your GNU Windows installation folder.
-
