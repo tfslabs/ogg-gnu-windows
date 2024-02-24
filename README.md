@@ -1,6 +1,6 @@
-# GNU Windows Extension
+# OGG
 
-This template helps a lot in building docs and understanding GNU Windows Extension source code, build and other related documents
+OGG Extension for GNU Windows
 
 ## Build this library
 
@@ -17,7 +17,8 @@ To build this library, you will need:
 Just run the  following commands in a terminal window to get started:
 
 ```cmd
-build.bat
+build.cmd
 ```
 
-Once it's done, you can see your bin. You can then paste it into your GNU Windows installation folder.
+Once it's done, you can see your folder `.bin`. You can then paste it into your GNU Windows installation folder.
+
