@@ -40,6 +40,7 @@
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="Ogg_Dir" Directory_Parent="cmake_Dir" DefaultDir="Ogg"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="bin_Dir" Directory_Parent="APPDIR" DefaultDir="bin"/>
     <ROW Directory="cmake_Dir" Directory_Parent="lib_Dir" DefaultDir="cmake"/>
     <ROW Directory="doc_Dir" Directory_Parent="share_Dir" DefaultDir="doc"/>
     <ROW Directory="html_Dir" Directory_Parent="libogg_Dir" DefaultDir="html"/>
@@ -53,30 +54,32 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{303E9E2D-244D-4921-8C3F-2E22AD440C6B}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="OggConfig.cmake" ComponentId="{96028586-AD40-4EF5-A906-F486B858A77A}" Directory_="Ogg_Dir" Attributes="0" KeyPath="OggConfig.cmake" Type="0"/>
+    <ROW Component="OggConfig.cmake" ComponentId="{977E1031-7D60-4F4F-90C5-94116CB60B7C}" Directory_="Ogg_Dir" Attributes="0" KeyPath="OggConfig.cmake" Type="0"/>
     <ROW Component="Path" ComponentId="{E04C700C-9CA7-4B7D-9DE8-5123A13CAAA0}" Directory_="APPDIR" Attributes="260" KeyPath="Path"/>
     <ROW Component="Software" ComponentId="{E9F0EA65-D476-4FC3-9FD8-FB413411EB43}" Directory_="APPDIR" Attributes="260" KeyPath="Software"/>
     <ROW Component="TheFlightSims" ComponentId="{52ABB691-E44B-4776-804E-799D4D2EF769}" Directory_="APPDIR" Attributes="260" KeyPath="TheFlightSims"/>
     <ROW Component="Version" ComponentId="{93676088-7E2F-4E80-81E9-DCE09F84AAC3}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
-    <ROW Component="bitpacking.html" ComponentId="{B4D36542-0A1A-4240-B4E1-94A44F93900C}" Directory_="libogg_1_Dir" Attributes="0" KeyPath="bitpacking.html" Type="0"/>
-    <ROW Component="config_types.h" ComponentId="{67506B28-EDE0-4537-96DF-7E53AACC9E47}" Directory_="ogg_Dir" Attributes="0" KeyPath="config_types.h" Type="0"/>
-    <ROW Component="fish_xiph_org.png" ComponentId="{6155B879-6E66-4088-869A-A5FC527394C7}" Directory_="html_Dir" Attributes="0" KeyPath="fish_xiph_org.png" Type="0"/>
-    <ROW Component="libogg.a" ComponentId="{038A9E03-CB73-4D4F-8B9F-6CAE6459DBE0}" Directory_="lib_Dir" Attributes="0" KeyPath="libogg.a" Type="0"/>
-    <ROW Component="ogg.pc" ComponentId="{876B959B-2CA5-4CE6-ABB8-CFBF18F74E60}" Directory_="pkgconfig_Dir" Attributes="0" KeyPath="ogg.pc" Type="0"/>
+    <ROW Component="bitpacking.html" ComponentId="{837C60B7-22D2-4ECB-A083-0B8C4701BA2F}" Directory_="libogg_1_Dir" Attributes="0" KeyPath="bitpacking.html" Type="0"/>
+    <ROW Component="config_types.h" ComponentId="{DEF8B292-5B36-4C92-A68D-EA3F7F6FE0C1}" Directory_="ogg_Dir" Attributes="0" KeyPath="config_types.h" Type="0"/>
+    <ROW Component="fish_xiph_org.png" ComponentId="{4804B1EF-DB23-4D84-92AA-9651A9B94BD8}" Directory_="html_Dir" Attributes="0" KeyPath="fish_xiph_org.png" Type="0"/>
+    <ROW Component="libogg.dll" ComponentId="{263299FE-CDB8-4864-8A56-07E480896B00}" Directory_="bin_Dir" Attributes="256" KeyPath="libogg.dll"/>
+    <ROW Component="libogg.dll.a" ComponentId="{050FF7BB-AA38-4D8D-8AAC-4331BE8AA91A}" Directory_="lib_Dir" Attributes="0" KeyPath="libogg.dll.a" Type="0"/>
+    <ROW Component="ogg.pc" ComponentId="{5735C6EA-394B-4180-9661-0E13B5C1847D}" Directory_="pkgconfig_Dir" Attributes="0" KeyPath="ogg.pc" Type="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="libogg.dll" Component_="libogg.dll" FileName="libogg.dll" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\bin\libogg.dll" SelfReg="false"/>
     <ROW File="config_types.h" Component_="config_types.h" FileName="CONFIG~1.H|config_types.h" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\include\ogg\config_types.h" SelfReg="false"/>
     <ROW File="ogg.h" Component_="config_types.h" FileName="ogg.h" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\include\ogg\ogg.h" SelfReg="false"/>
     <ROW File="os_types.h" Component_="config_types.h" FileName="os_types.h" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\include\ogg\os_types.h" SelfReg="false"/>
     <ROW File="OggConfig.cmake" Component_="OggConfig.cmake" FileName="OGGCON~1.CMA|OggConfig.cmake" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\cmake\Ogg\OggConfig.cmake" SelfReg="false"/>
     <ROW File="OggConfigVersion.cmake" Component_="OggConfig.cmake" FileName="OGGCON~2.CMA|OggConfigVersion.cmake" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\cmake\Ogg\OggConfigVersion.cmake" SelfReg="false"/>
-    <ROW File="OggTargetsminsizerel.cmake" Component_="OggConfig.cmake" FileName="OGGTAR~1.CMA|OggTargets-minsizerel.cmake" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\cmake\Ogg\OggTargets-minsizerel.cmake" SelfReg="false"/>
+    <ROW File="OggTargetsnoconfig.cmake" Component_="OggConfig.cmake" FileName="OGGTAR~1.CMA|OggTargets-noconfig.cmake" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\cmake\Ogg\OggTargets-noconfig.cmake" SelfReg="false"/>
     <ROW File="OggTargets.cmake" Component_="OggConfig.cmake" FileName="OGGTAR~2.CMA|OggTargets.cmake" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\cmake\Ogg\OggTargets.cmake" SelfReg="false"/>
-    <ROW File="libogg.a" Component_="libogg.a" FileName="libogg.a" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\libogg.a" SelfReg="false"/>
+    <ROW File="libogg.dll.a" Component_="libogg.dll.a" FileName="LIBOGG~1.A|libogg.dll.a" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\libogg.dll.a" SelfReg="false"/>
     <ROW File="ogg.pc" Component_="ogg.pc" FileName="ogg.pc" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\lib\pkgconfig\ogg.pc" SelfReg="false"/>
     <ROW File="fish_xiph_org.png" Component_="fish_xiph_org.png" FileName="FISH_X~1.PNG|fish_xiph_org.png" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\share\doc\libogg\html\fish_xiph_org.png" SelfReg="false"/>
     <ROW File="framing.html" Component_="fish_xiph_org.png" FileName="FRAMIN~1.HTM|framing.html" Attributes="0" SourcePath="..\..\.prepare-for-release\libogg\share\doc\libogg\html\framing.html" SelfReg="false"/>
@@ -241,16 +244,17 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
-    <ROW Feature_="MainFeature" Component_="config_types.h"/>
-    <ROW Feature_="MainFeature" Component_="OggConfig.cmake"/>
-    <ROW Feature_="MainFeature" Component_="libogg.a"/>
-    <ROW Feature_="MainFeature" Component_="ogg.pc"/>
-    <ROW Feature_="MainFeature" Component_="fish_xiph_org.png"/>
-    <ROW Feature_="MainFeature" Component_="bitpacking.html"/>
     <ROW Feature_="MainFeature" Component_="Software"/>
     <ROW Feature_="MainFeature" Component_="TheFlightSims"/>
     <ROW Feature_="MainFeature" Component_="Path"/>
     <ROW Feature_="MainFeature" Component_="Version"/>
+    <ROW Feature_="MainFeature" Component_="libogg.dll"/>
+    <ROW Feature_="MainFeature" Component_="config_types.h"/>
+    <ROW Feature_="MainFeature" Component_="OggConfig.cmake"/>
+    <ROW Feature_="MainFeature" Component_="libogg.dll.a"/>
+    <ROW Feature_="MainFeature" Component_="ogg.pc"/>
+    <ROW Feature_="MainFeature" Component_="fish_xiph_org.png"/>
+    <ROW Feature_="MainFeature" Component_="bitpacking.html"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="gnuwindows.exe" SourcePath="..\..\.prepare-for-release\gnu-windows.ico" Index="0"/>
